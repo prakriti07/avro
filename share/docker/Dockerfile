@@ -163,7 +163,7 @@ RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then\
     && apt-get -qqy update \
     && apt-get -qqy install --no-install-recommends dotnet-sdk-3.1 \
     && apt-get -qqy clean \
-    && rm -rf /var/lib/apt/lists;
+    && rm -rf /var/lib/apt/lists; \
     fi
 
 # Install Ruby modules
