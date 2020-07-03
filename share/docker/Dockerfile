@@ -151,7 +151,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel \
  && python3 -m pip install tox zstandard
 
 # Install .NET SDK
-RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then\
+RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ] ; then \
     curl -SL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-linux-arm64.tar.gz \
     && sudo mkdir -p /usr/share/dotnet \
     && sudo tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
