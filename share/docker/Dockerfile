@@ -155,7 +155,7 @@ RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then\
     curl -SL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-linux-arm64.tar.gz \
     && sudo mkdir -p /usr/share/dotnet \
     && sudo tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
-    && sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
+    && sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet; \
     else \
     curl -sSLO https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb \
     && dpkg -i packages-microsoft-prod.deb \
@@ -163,7 +163,7 @@ RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then\
     && apt-get -qqy update \
     && apt-get -qqy install --no-install-recommends dotnet-sdk-3.1 \
     && apt-get -qqy clean \
-    && rm -rf /var/lib/apt/lists
+    && rm -rf /var/lib/apt/lists;
     fi
 
 # Install Ruby modules
