@@ -156,7 +156,7 @@ RUN if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then\
     && sudo mkdir -p /usr/share/dotnet \
     && sudo tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
     && sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
-    else
+    else \
     curl -sSLO https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb \
     && dpkg -i packages-microsoft-prod.deb \
     && rm packages-microsoft-prod.deb \
