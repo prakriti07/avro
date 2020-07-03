@@ -25,12 +25,22 @@ services:
 matrix:
   include:
   - language: generic
+    arch: amd64
     env:
       JAVA=8
+  - language: generic
+    arch: arm64
+    env:
+      JAVA=8    
 
   - language: generic
+    arch: amd64
     env:
       JAVA=11
+  - language: generic
+    arch: arm64
+    env:
+      JAVA=11    
 
   - os: windows
     language: bash
